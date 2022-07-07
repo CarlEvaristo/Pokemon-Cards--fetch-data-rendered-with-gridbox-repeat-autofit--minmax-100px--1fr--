@@ -11,15 +11,21 @@ function getHtml (aPokemon) {
         <div class="a-pokemon-name">${aPokemon.name.english}</div>
         <div class="a-pokemon-type">${aPokemon.type.join(' / ')}</div>
         
-        <div class="a-pokemon-stat1">${aPokemon.base.HP}</div>
-        <div class="a-pokemon-stat2">${aPokemon.base.Attack}</div>
-        <div class="a-pokemon-stat3">${aPokemon.base.Defense}</div>
-        <div class="a-pokemon-stat4">${aPokemon.base.Speed}</div>
+        <div class="a-pokemon-stat">${aPokemon.base.HP}</div>
+        <div class="a-pokemon-stat">${aPokemon.base.Attack}</div>
+        <div class="a-pokemon-stat">${aPokemon.base.Defense}</div>
+        <div class="a-pokemon-stat">${aPokemon.base.Speed}</div>
+
+        <div class="a-pokemon-lang">${aPokemon.name.japanese}</div>
+        <div class="a-pokemon-lang">${aPokemon.name.chinese}</div>
+        <div class="a-pokemon-lang">${aPokemon.name.french}</div>
     </div>
     `
 }
 
-getData().then(allPokemon => {
+function displayAllPokemon(allPokemon) {
     document.getElementById("gridbox").innerHTML = allPokemon.map(pokemon => getHtml(pokemon)).join("")
-})
+}
+
+getData().then(allPokemon => displayAllPokemon(allPokemon))
 
