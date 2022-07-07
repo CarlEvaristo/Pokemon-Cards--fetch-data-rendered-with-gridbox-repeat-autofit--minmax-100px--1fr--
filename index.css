@@ -1,52 +1,50 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: whitesmoke;
-    display:flex;
-    justify-content: center;
-    margin: 1em 0;
-}
-#gridbox{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap:1em;
-    width:70vw;
-    height:70vh;
-}
-.a-pokemon {
-    background: white;
-    padding: 0.2em;
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
-    grid-gap: 0.2em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.115);
-}
+    html, body {
+        margin:0;
+        padding: 0;
+        background-color: whitesmoke;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    #gridbox{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap:1em;
+        width:70vw;
+        height:70vh;
+    }
+    .a-pokemon {
+        padding: 0.2em;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.115);
+        text-align: center;
 
-.a-pokemon-id {
-    background-color:#add8e6;
-    grid-column: span 3;
-    grid-row:1;
-}
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
+        grid-gap: 0.2em;
+        
+    }
 
-.a-pokemon-name {
-    background-color:#ffffe0;
-    grid-column: span 6;
-    grid-row:1;
-}
-.a-pokemon-type {
-    background-color:#90ee90;
-    grid-column: span 3;
-    grid-row:1;
-}
-.a-pokemon-stat {
-    background-color:pink;
-    grid-column: span 3;
-    grid-row:2;
-}
-.a-pokemon-lang {
-  background-color: bisque;  
-  grid-column: span 4;
-  grid-row: 3;
-}
+    .a-pokemon-id {
+        background-color:#add8e6;
+        grid-column: span 3;
+    }
+
+    .a-pokemon-name {
+        background-color:#ffffe0;
+        grid-column: span 6;
+    }
+    .a-pokemon-type {
+        background-color:#90ee90;
+        grid-column: span 3;
+    }
+    .a-pokemon-stat {
+        background-color:pink;
+        grid-column: span 3;
+    }
+    .a-pokemon-lang {
+    background-color: bisque;  
+    grid-column: span 4;
+    }
