@@ -1,0 +1,56 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#gridbox{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap:1em;
+    width:70vw;
+    height:70vh;
+}
+.a-pokemon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "id name name type"
+        "stat1 stat2 stat3 stat4";
+    border: solid black 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.115);
+}
+
+.a-pokemon-id {
+    background-color:#add8e6;
+    grid-area: id;
+}
+
+.a-pokemon-name {
+    background-color:#ffffe0;
+    grid-area: name;
+}
+.a-pokemon-type {
+    background-color:#90ee90;
+    grid-area: type;
+}
+.a-pokemon-stat1 {
+    background-color:pink;
+    grid-area: stat1;
+}
+.a-pokemon-stat2 {
+    background-color:pink;
+    grid-area: stat2;
+}
+.a-pokemon-stat3 {
+    background-color:pink;
+    grid-area: stat3;
+}
+.a-pokemon-stat4 {
+    background-color:pink;
+    grid-area: stat4;
+}
+
